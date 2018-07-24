@@ -31,7 +31,7 @@ namespace tgClipBoard
                 string patternVola, patternMega, patternSendspace, patternMediafire;
                 patternVola = "^[/]?r/.+";
                 patternMega = "^[/]?#F!.+";
-                patternSendspace = "^[/]?file.{6}|[/]?filegroup/.{6}";
+                patternSendspace = "^(?:[/]?file/.{6}|[/]?filegroup/.+)$";
                 //patternSendspaceGroup = "[/]?file[group]?.{6}";
                 patternMediafire = "^[/]?(?:file|folder)/.{10,}";
                 Dictionary<string, string> dic = new Dictionary<string, string>();
