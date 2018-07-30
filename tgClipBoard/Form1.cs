@@ -23,11 +23,12 @@ namespace tgClipBoard
         private void button1_ClipboardChanged(object sender, ClipboardChangedEventArgs e)
         {
             try
-            {
-                string g;
+            {             
                 //string clipboardContentType = e.DataObject.GetType().ToString(); ;
-                //if (clipboardContentType == DataFormats.Text)
-                g = e.DataObject.GetData(DataFormats.Text).ToString();
+                //if (clipboardContentType == DataFormats.Text)                
+                if (!e.DataObject.GetDataPresent(DataFormats.Text))
+                    return;
+                string g = e.DataObject.GetData(DataFormats.Text).ToString();
                 string patternVola, patternMega, patternSendspace, patternMediafire;
                 patternVola = "^[/]?r/.+";
                 patternMega = "^[/]?#F!.+";
@@ -57,7 +58,7 @@ namespace tgClipBoard
             {
                 // Swallow or pop-up, not sure
                 // Trace.Write(e.ToString());
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(ex.ToString());
             }
         }
 
