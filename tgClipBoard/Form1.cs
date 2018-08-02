@@ -31,7 +31,7 @@ namespace tgClipBoard
                 string g = e.DataObject.GetData(DataFormats.Text).ToString();
                 string patternVola, patternMega, patternSendspace, patternMediafire;
                 patternVola = "^[/]?r/.+";
-                patternMega = "^[/]?#F!.+";
+                patternMega = "^[/]?#.?!.+";
                 patternSendspace = "^(?:[/]?file/.{6}|[/]?filegroup/.+)$";
                 //patternSendspaceGroup = "[/]?file[group]?.{6}";
                 patternMediafire = "^[/]?(?:file|folder)/.{10,}";
